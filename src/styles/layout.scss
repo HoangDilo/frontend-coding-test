@@ -1,0 +1,36 @@
+@use 'colors' as *;
+
+* {
+    box-sizing: border-box;
+    font-family: 'DM Sans';
+    transition: all 0.5s ease;
+}
+
+body {
+    margin: 0
+}
+
+button {
+    border-radius: 8px;
+    height: 64px;
+    padding: 0px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    gap: 8px;
+    span {
+        white-space: nowrap;
+    }
+    &.dark {
+        background-color: $button-color;
+        color: $text-white;
+    }
+    &.light {
+        background-color: $button-color-light;
+        color: $button-color;
+    }
+}

@@ -9,6 +9,7 @@ export interface IButtonProps {
     icon?: React.ReactNode;
     width?: number;
     height?: number;
+    isLoading?: boolean;
 }
 
 export default function Button({
@@ -18,15 +19,22 @@ export default function Button({
     icon,
     width,
     height,
+    isLoading = false,
 }: IButtonProps) {
     return (
         <button
             className={`button ${type}`}
-            onClick={onClick}
+            onClick={!isLoading ? onClick : undefined}
             style={{ width: `${width}px`, height: `${height}px` }}
         >
-            <span>{label}</span>
-            {icon}
+            {!isLoading ? (
+                <>
+                    <span>{label}</span>
+                    {icon}
+                </>
+            ) : (
+                <div className="spinner" />
+            )}
         </button>
     );
 }

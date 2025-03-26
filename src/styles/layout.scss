@@ -8,6 +8,11 @@
 
 body {
     margin: 0;
+    background-color: $background-color;
+}
+
+p {
+    margin: 0
 }
 
 button {
@@ -48,6 +53,12 @@ button {
     transform: scaleX(-1) rotateZ(0deg);
     background-image: url('./../assets/svgs/Spinner.svg');
     animation: spin 1s linear infinite;
+}
+
+.ic--logo {
+    background-image: url('./../assets/svgs/Logo.svg');
+    background-size: contain;
+    background-position: center;
 }
 
 @keyframes spin {

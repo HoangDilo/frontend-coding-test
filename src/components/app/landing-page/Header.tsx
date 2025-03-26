@@ -2,14 +2,14 @@ import * as React from 'react';
 
 import '@/styles/app/landing-page/header.scss';
 
-import Logo from '@/assets/svgs/Logo';
 import { MENU } from '@/constants/header.constant';
 import CaretDown from '@/assets/svgs/CaretDown';
 
 export default function Header() {
     return (
         <div className="header-container">
-            <Logo />
+            <div className='logo-container'></div>
+            <div className='ic--logo' style={{width: 106, height: 28}}></div>
             <div className="menu-container">
                 {MENU.map((item) => (
                     <div className="menu-item" key={item.key}>

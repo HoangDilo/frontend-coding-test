@@ -90,3 +90,9 @@ export const MODEL_STORIES = [
         img_url: story5,
     },
 ];
+
+export const REASONS = [
+    'Access global opportunities',
+    'Join a supportive and professional team',
+    'Get featured in high-profile events and campaigns',
+];

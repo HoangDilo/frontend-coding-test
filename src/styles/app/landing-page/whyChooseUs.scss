@@ -1,7 +1,28 @@
+@use './../../colors.scss' as *;
+
 .why-choose-us {
     padding: 80px;
     height: 600px;
     width: 100%;
     background-image: url('./../../../assets/images/why-choose-us.png');
     background-size: cover;
+    .why-choose-us-content {
+        padding: 40px 128px;
+        .title {
+            margin-bottom: 24px;
+        }
+        .reasons {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 24px;
+            .reason {
+                display: flex;
+                gap: 16px;
+                font-size: 24px;
+                color: $text-gray;
+                line-height: 32px;
+            }
+        }
+    }
 }

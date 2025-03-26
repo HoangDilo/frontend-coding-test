@@ -8,10 +8,7 @@ const WhyChooseUs = () => {
         <div className="why-choose-us">
             <div className="why-choose-us-content">
                 <h2 className="title">Why Choose</h2>
-                <div
-                    className="ic--logo"
-                    style={{ width: 303, height: 80 }}
-                ></div>
+                <div className="ic--logo logo"></div>
                 <div className="reasons">
                     {REASONS.map((reason, index) => (
                         <div key={index} className="reason">

@@ -10,6 +10,7 @@ export interface IButtonProps {
     width?: number;
     height?: number;
     isLoading?: boolean;
+    className?: string;
 }
 
 export default function Button({
@@ -17,15 +18,13 @@ export default function Button({
     label,
     onClick,
     icon,
-    width,
-    height,
     isLoading = false,
+    className = '',
 }: IButtonProps) {
     return (
         <button
-            className={`button ${type}`}
+            className={`button ${type} ${className}`}
             onClick={!isLoading ? onClick : undefined}
-            style={{ width: `${width}px`, height: `${height}px` }}
         >
             {!isLoading ? (
                 <>

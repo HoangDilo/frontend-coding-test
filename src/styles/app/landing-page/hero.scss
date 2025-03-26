@@ -1,33 +1,74 @@
-.hero-container {
-    background-image: url('./../../../assets/images/Hero_banner.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 645px;
-    display: flex;
-    justify-content: flex-end;
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        justify-content: center;
-        align-items: flex-start;
-        margin-right: 160px;
+@use './../../colors.scss' as *;
 
-        @media screen and (max-width: 1200px) {
-            margin-right: 10px;
+.hero-container-wrapper {
+    @media screen and (max-width: 900px) {
+        padding: 4px 20px;
+    }
+    .hero-container {
+        background-image: url('./../../../assets/images/Hero_banner.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 645px;
+        display: flex;
+        justify-content: flex-end;
+        @media screen and (max-width: 900px) {
+            border-radius: 20px;
+            justify-content: unset;
+            height: 240px;
         }
-        width: 692px;
-        .title {
-            font-size: 72px;
-            font-weight: 700;
-            margin: 0;
-        }
-        .description {
-            font-size: 24px;
-            line-height: 32px;
-            font-weight: 500;
-            margin: 0;
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            justify-content: center;
+            align-items: flex-start;
+            margin-right: 160px;
+
+            @media screen and (max-width: 1200px) {
+                margin-right: 10px;
+            }
+            @media screen and (max-width: 900px) {
+                margin-right: 0;
+                margin-left: 360px;
+                gap: 8px;
+                max-width: 207px;
+            }
+            @media screen and (max-width: 600px) {
+                margin-left: 240px;
+            }
+            @media screen and (max-width: 500px) {
+                margin-left: 128px;
+                
+            }
+            width: 692px;
+            .title {
+                font-size: 72px;
+                font-weight: 700;
+                margin: 0;
+                @media screen and (max-width: 900px) {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+            .description {
+                font-size: 24px;
+                line-height: 32px;
+                font-weight: 500;
+                margin: 0;
+                color: $button-color-secondary;
+                @media screen and (max-width: 900px) {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 16px;
+                }
+            }
+            .btn-hero {
+                width: 158px;
+                @media screen and (max-width: 900px) {
+                    width: 129px;
+                }
+            }
         }
     }
 }

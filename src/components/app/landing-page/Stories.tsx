@@ -32,7 +32,11 @@ export default function Stories() {
             <div className="left-box">
                 <p className="title">Our Success Stories</p>
                 <div className="button-wrapper">
-                    <Button type="dark" label="Apply Now" width={158} />
+                    <Button
+                        type="dark"
+                        label="Apply Now"
+                        className="btn-story"
+                    />
                     <span className="norm-text">to Start Your Journey!</span>
                 </div>
             </div>
@@ -42,9 +46,12 @@ export default function Stories() {
                         <StoryCard key={story.title} {...story} />
                     ))}
                 </div>
-                <div className='story-dots'>
+                <div className="story-dots">
                     {MODEL_STORIES.map((_, i) => (
-                        <div key={i} className={`dot ${index === i ? 'active' : ''}`} />
+                        <div
+                            key={i}
+                            className={`dot ${index === i ? 'active' : ''}`}
+                        />
                     ))}
                 </div>
                 <div className="story-arrows">
@@ -55,6 +62,10 @@ export default function Stories() {
                         <ArrowFat />
                     </div>
                 </div>
+            </div>
+            <div className="button-wrapper-mobile">
+                <Button type="dark" label="Apply Now" className="btn-story" />
+                <span className="norm-text">to Start Your Journey!</span>
             </div>
         </div>
     );

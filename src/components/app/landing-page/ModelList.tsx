@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import '@/styles/app/landing-page/modelList.scss';
 import Button from '@/components/common/Button';
-import ArrowRight from '@/assets/svgs/ArrowRight';
 import Image from 'next/image';
 import { LIST_MODELS } from '@/constants/model.constant';
 
@@ -14,16 +13,21 @@ export default function ModelList() {
                 <Button
                     type="light"
                     label="View All"
+                    className="view-all"
                     width={126}
-                    icon={<ArrowRight />}
+                    icon={<div className="ic--arrow-right"></div>}
                 />
+                <div
+                    className="ic--arrow-right arrow-mobile"
+                    style={{ width: 24, height: 24 }}
+                ></div>
             </div>
             <div className="models-list">
                 <div className="models-list-container">
                     {LIST_MODELS.map((item) => (
                         <div className="model-card" key={item.name}>
                             <div className="model-image-wrapper">
-                                <Image  
+                                <Image
                                     src={item.image}
                                     width={287.47}
                                     height={360}

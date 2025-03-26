@@ -5,6 +5,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px 80px;
+    position: sticky;
+    z-index: 10;
+    background-color: $background-color;
+    top: 0;
     @media screen and (max-width: 900px) {
         padding: 8px 24px;
     }

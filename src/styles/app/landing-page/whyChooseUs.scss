@@ -6,22 +6,62 @@
     width: 100%;
     background-image: url('./../../../assets/images/why-choose-us.png');
     background-size: cover;
+    @media screen and (max-width: 900px) {
+        background-image: url('./../../../assets/images/why-choose-us-mobile.png');
+        padding: 28px 20px;
+        height: 304px;
+        margin: 20px 0px;
+    }
     .why-choose-us-content {
         padding: 40px 128px;
+        @media screen and (max-width: 900px) {
+            padding: 0;
+        }
         .title {
             margin-bottom: 24px;
+            @media screen and (max-width: 900px) {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+        }
+        .logo {
+            width: 303px;
+            height: 80px;
+            @media screen and (max-width: 900px) {
+                width: 152px;
+                height: 40px;
+            }
         }
         .reasons {
             display: flex;
             flex-direction: column;
             gap: 24px;
             margin-top: 24px;
+            @media screen and (max-width: 900px) {
+                gap: 12px;
+                margin-top: 12px;
+            }
+            @media screen and (max-width: 600px) {
+                max-width: 255px;
+            }
             .reason {
                 display: flex;
+                align-items: center;
                 gap: 16px;
                 font-size: 24px;
                 color: $text-gray;
                 line-height: 32px;
+                @media screen and (max-width: 900px) {
+                    font-size: 16px;
+                    gap: 8px;
+                    line-height: 24px;
+                    .ic--checkbox {
+                        border-radius: 16px;
+                        width: 16px;
+                        min-width: 16px;
+                        height: 16px;
+                    }
+                }
             }
         }
     }

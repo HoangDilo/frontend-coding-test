@@ -1,0 +1,65 @@
+@use './../../colors.scss' as *;
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 80px;
+    position: sticky;
+    z-index: 10;
+    background-color: $background-color;
+    top: 0;
+    @media screen and (max-width: 900px) {
+        padding: 8px 24px;
+    }
+    .back-btn {
+        rotate: 90deg;
+        @media screen and (min-width: 900px) {
+            display: none;
+            cursor: pointer;
+        }
+    }
+    .menu {
+        display: none;
+        @media screen and (max-width: 900px) {
+            display: block;
+            cursor: pointer;
+        }
+    }
+    .logo-container {
+        padding: 14px 18px 6px 18px;
+    }
+    .menu-container {
+        display: flex;
+        gap: 8px;
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+        .menu-item {
+            padding: 14px 16px;
+            font-weight: 600;
+            font-family: 'DM Sans';
+            text-align: center;
+            vertical-align: middle;
+            color: $text-color;
+            gap: 8px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+    .header-button {
+        background-color: $button-color;
+        border: none;
+        border-radius: 8px;
+        color: $text-white;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 14px 16px;
+        height: 48px;
+        font-size: 14px;
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+    }
+}

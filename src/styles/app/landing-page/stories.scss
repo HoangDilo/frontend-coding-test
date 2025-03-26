@@ -1,0 +1,162 @@
+@use './../../colors.scss' as *;
+
+.stories-container {
+    padding: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 48px;
+    justify-content: center;
+    @media screen and (max-width: 900px) {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+    }
+    .left-box {
+        max-width: 520px;
+        @media screen and (max-width: 1460px) {
+            max-width: 100%;
+        }
+        .title {
+            margin-bottom: 40px;
+            @media screen and (max-width: 900px) {
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+        }
+        .button-wrapper {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+            .norm-text {
+                line-height: 28px;
+                font-size: 20px;
+                color: $text-color;
+            }
+        }
+    }
+    .story-cards-container {
+        width: 712px;
+        height: 425px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        @media screen and (max-width: 765px) {
+            width: 600px;
+            height: 350px;
+        }
+        @media screen and (max-width: 650px) {
+            width: 335px;
+            height: 242px;
+        }
+        .story-cards {
+            display: flex;
+            .story-card {
+                position: relative;
+                text-align: right;
+                img {
+                    filter: grayscale(100%);
+                    @media screen and (max-width: 765px) {
+                        width: 600px;
+                        height: 350px;
+                    }
+                    @media screen and (max-width: 650px) {
+                        width: 335px;
+                        height: 242px;
+                    }
+                }
+                .contents {
+                    position: absolute;
+                    top: 32px;
+                    right: 32px;
+                    .story-title {
+                        font-size: 24px;
+                        margin-bottom: 12px;
+                        @media screen and (max-width: 900px) {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                    }
+                    .story-content {
+                        font-size: 48px;
+                        font-weight: 700;
+                        max-width: 568px;
+                        word-wrap: break-word;
+                        display: inline-block;
+                        @media screen and (max-width: 900px) {
+                            font-size: 24px;
+                            line-height: 28px;
+                        }
+                    }
+                }
+            }
+        }
+        .story-dots {
+            display: flex;
+            gap: 6px;
+            position: absolute;
+            bottom: 163.5px;
+            right: 32px;
+            @media screen and (max-width: 650px) {
+                bottom: 20px;
+                right: 20px;
+            }
+            .dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 8px;
+                background-color: $dot;
+                cursor: pointer;
+                &.active {
+                    width: 28px;
+                    background-color: $button-color;
+                }
+            }
+        }
+        .story-arrows {
+            position: absolute;
+            bottom: 32px;
+            right: 32px;
+            display: flex;
+            gap: 8px;
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+            .arrow {
+                width: 48px;
+                height: 48px;
+                border-radius: 8px;
+                border: 1px solid $text-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &.right {
+                    rotate: 180deg;
+                }
+            }
+        }
+    }
+    .button-wrapper-mobile {
+        display: none;
+        @media screen and (max-width: 900px) {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-top: 12px;
+            .btn-story {
+                width: 137px;
+                font-weight: 600;
+            }
+            .norm-text {
+                line-height: 20px;
+                font-size: 14px;
+                color: $text-color;
+            }
+        }
+    }
+}

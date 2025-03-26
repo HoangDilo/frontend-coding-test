@@ -1,15 +1,13 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { DM_Sans } from 'next/font/google';
 
-const geistSans = Geist({
-    variable: '--font-geist-sans',
-    subsets: ['latin'],
-});
+import '@/styles/layout.scss'
 
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
+const dmSans = DM_Sans({
+    variable: '--font-dm-sans',
     subsets: ['latin'],
-});
+    weight: ['400', '500', '600','700'],
+})
 
 export const metadata: Metadata = {
     title: 'Weltenters Test',
@@ -23,7 +21,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable}`}>
+            <body className={`${dmSans.variable}`}>
                 {children}
             </body>
         </html>

@@ -1,0 +1,86 @@
+@use './../../colors.scss' as *;
+
+.model-list-container {
+    padding: 80px;
+    @media screen and (max-width: 900px) {
+        padding: 20px;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 24px;
+        .title {
+            @media screen and (max-width: 900px) {
+                font-size: 24px;
+            }
+        }
+        .view-all {
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+        }
+        .arrow-mobile {
+            display: none;
+            @media screen and (max-width: 900px) {
+                display: block;
+                cursor: pointer;
+            }
+        }
+    }
+    .models-list {
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .models-list-container {
+            display: flex;
+            gap: 16px;
+            .model-card {
+                cursor: pointer;
+                &:hover {
+                    .model-image {
+                        transform: scale(1.1);
+                    }
+                }
+                .model-image-wrapper {
+                    overflow: hidden;
+                    width: 287.47px;
+                    height: 360px;
+                    border-radius: 8px;
+                    @media screen and (max-width: 900px) {
+                        width: 218px;
+                        height: 273px;
+                    }
+                    .model-image {
+                        @media screen and (max-width: 900px) {
+                            width: 218px;
+                            height: 273px;
+                        }
+                    }
+                }
+                .model-name {
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: $text-color;
+                    margin: 0;
+                    margin-top: 4px;
+                    @media screen and (max-width: 900px) {
+                        font-size: 16px;
+                    }
+                }
+                .model-location {
+                    color: $button-color-secondary;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-top: 2px;
+                    @media screen and (max-width: 900px) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

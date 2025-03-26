@@ -1,0 +1,23 @@
+@use './../../colors.scss' as *;
+
+.stories-container {
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    .left-box {
+        max-width: 520px;
+        .title {
+            margin-bottom: 40px;
+        }
+        .button-wrapper {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            .norm-text {
+                line-height: 28px;
+                font-size: 20px;
+                color: $text-color;
+            }
+        }
+    }
+}

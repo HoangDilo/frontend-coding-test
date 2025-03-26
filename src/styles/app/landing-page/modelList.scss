@@ -1,16 +1,52 @@
+@use './../../colors.scss' as *;
+
 .model-list-container {
-  display: flex;
-  padding: 80px;
-  gap: 24px;
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    .title {
-        font-size: 72px;
-        font-weight: 700;
-        margin: 0;
+    padding: 80px;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 24px;
     }
-  }
+    .models-list {
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .models-list-container {
+            display: flex;
+            gap: 16px;
+            .model-card {
+                cursor: pointer;
+                &:hover {
+                    .model-image {
+                        transform: scale(1.1);
+                    }
+                }
+                .model-image-wrapper {
+                    overflow: hidden;
+                    width: 287.47px;
+                    height: 360px;
+                    border-radius: 8px;
+                    .model-image {
+                    }
+                }
+                .model-name {
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: $text-color;
+                    margin: 0;
+                    margin-top: 4px;
+                }
+                .model-location {
+                    color: $button-color-secondary;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
 }

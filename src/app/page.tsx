@@ -17,7 +17,7 @@ export default function Home() {
                         </Link>
                     </li>
                     <li className="link-item">
-                        <Link href="/todo-list" className="link">
+                        <Link href="/image-generator" className="link">
                             Link to Task 2 page
                         </Link>
                     </li>
